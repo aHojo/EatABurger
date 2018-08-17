@@ -1,39 +1,67 @@
-<h1>Burger Time!</h1>
+<div class="container-fluid text-center">
+	<h1>Burger Time!</h1>
+	<div class="row">
+		<img class="mx-auto" src="../public/assets/img/pushbuger.png" width="400" height="400">
+	</div>
 
-<h2>Eat your burger!</h2>
+	<div id="burgers" class="row ">
+		<ul id="to-be-eaten" class="col-2 mx-auto"> 
+			<li class="border">
+				burger
+				<button type="submit">Devour</button>				
+			</li>
+		</ul>
+		
+		<ul id="eaten" class="col-2 mx-auto"> 
+			<li class="border">
+				burger
+				<button type="submit">Trash</button>				
+			</li>
+		</ul>
+	</div>
+
+	<form id="burger-order-form"  autocomplete="off">
+ 
+		<div>
+			<input id="text-area" type="input" id="ca" name="name">
+		</div>
+
+
+		<button id="add-burger">Add Burger</button>
+		<p>Add all the toppings you'd like :)</p>
+	</form>
+
+</div>
+
+
+
+
 <!-- TODO Create a button to submit data to the user -->
 
-{{!-- <ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}}
+{{!--
+<ul>
+	{{#each cats}} {{#unless sleepy}} {{> cats/cat-block sleep=true}} {{/unless}} {{/each}}
 </ul>
 
 <h2>Cats that are sleepy!</h2>
 
 <ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
+	{{#each cats}} {{#if sleepy}} {{> cats/cat-block sleep=false}} {{/if}} {{/each}}
 </ul>
 
 <h2>Add a Cat</h2>
 <form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
+	<div class="form-group">
+		<label for="ca">Cat Name:</label>
+		<input type="text" id="ca" name="name">
+	</div>
 
-  <div class="form-group">
-    <label for="slee">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
+	<div class="form-group">
+		<label for="slee">Sleepy?</label><br>
+		<input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
+		<input type="radio" name="sleepy" value="0"> Awake
+	</div>
 
-  <button type="submit">Add Cat</button>
+	<button type="submit">Add Cat</button>
 </form> --}}

@@ -5,6 +5,9 @@ var PORT = process.env.PORT || 3000;
 
 var app = express();
 
+//Use Javascript and css separated files
+app.use("/public", express.static(__dirname + "/public"));
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 

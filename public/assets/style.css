@@ -1,0 +1,25 @@
+body {
+    background-color: yellow;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#burgers {
+    margin-top: 25px;
+}
+
+#burger-order-form {
+
+}
+
+#text-area {
+    height:100px;
+    width: 300px;
+}
