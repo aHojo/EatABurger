@@ -4,13 +4,40 @@ $('#add-burger').on("click", function() {
     var burger = {
         'burger_name': $('#text-area').val().trim()
     }
-
-    $.ajax("/api/burger",{
-        "type": POST,
-        "data": burger
-    }).then(function (data) {
+    $.post("/api/burger", burger, function (data) {
         console.log(data);
+        location.reload();
     });
     
-    console.log(burger);
+
 });
+
+
+$(".devour").on('click', function () {
+    event.preventDefault();
+
+    var id = $(this).data("id");
+
+    console.log(id);
+    $.ajax("/api/burger/" + id, {
+        type: "PUT",
+        data: id
+    }).then(function (data) {
+        console.log(data);
+        location.reload();
+    });
+})
+$(".trash").on('click', function () {
+    event.preventDefault();
+
+    var id = $(this).data("id");
+
+    console.log(id);
+    $.ajax("/api/burger/" + id, {
+        type: "DELETE",
+        data: id
+    }).then(function (data) {
+        console.log(data);
+        location.reload();
+    });
+})

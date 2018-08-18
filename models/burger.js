@@ -2,13 +2,26 @@ var orm = require("../config/orm");
 
 var burger = {
     all: function(cb) {
-        console.log("in all!");
+        orm.selectAll(function (result) {
+            cb(result);
+        });
     },
     // The variables cols and vals are arrays.
-    create: function(cols, vals, cb) {
+    create: function(col, vals, cb) {
+        orm.insertOne(col, vals, function(result) {
+            console.log('burger ', result);
+            cb(result)
+        });
     },
-    update: function(objColVals, condition, cb) {
-
+    update: function(val, cb) {
+        orm.updateOne(val, function (result) {
+            cb(result);
+        });
+    },
+    delete: function(val, cb) {
+        orm.deleteOne(val, function (result) {
+            cb(result);
+        });
     }
   };
 

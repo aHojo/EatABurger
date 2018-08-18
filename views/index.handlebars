@@ -5,18 +5,31 @@
 	</div>
 
 	<div id="burgers" class="row ">
-		<ul id="to-be-eaten" class="col-2 mx-auto"> 
-			<li class="border">
-				burger
-				<button type="submit">Devour</button>				
-			</li>
+		<ul  class="col-2 mx-auto"> 
+			{{#each burger}}
+				{{#unless devoured}}
+					<li id="to-be-eaten">
+						{{burger_name}}
+
+						<button class="devour" data-id="{{id}}">
+							Devour
+						</button>
+					</li>
+				{{/unless}}
+			{{/each}}
 		</ul>
 		
-		<ul id="eaten" class="col-2 mx-auto"> 
-			<li class="border">
-				burger
-				<button type="submit">Trash</button>				
-			</li>
+		<ul class="col-2 mx-auto"> 
+			{{#each burger}}
+				{{#if devoured}}
+					<li id="eaten">
+						{{burger_name}}
+						<button class="trash" data-id="{{id}}">
+							Trash
+						</button>
+					</li>
+				{{/if}}
+			{{/each}}
 		</ul>
 	</div>
 

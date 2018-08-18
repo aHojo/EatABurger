@@ -15,6 +15,13 @@ ul {
     margin-top: 25px;
 }
 
+#to-be-eaten {
+    margin: 10px;
+}
+
+#eaten {
+    margin: 10px;
+}
 #burger-order-form {
 
 }
